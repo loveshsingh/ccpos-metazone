@@ -1,0 +1,89 @@
+{
+  "cli": {
+    "version": ">= 0.38.2"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+
+    "production": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "releaseChannel": "production",
+      "env": {
+        "APP_ENV": "production"
+      }
+    },
+    "production-debug": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "releaseChannel": "production",
+      "env": {
+        "APP_ENV": "production"
+      }
+    },
+    "test": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "releaseChannel": "test",
+      "env": {
+        "APP_ENV": "staging"
+      }
+    },
+    "test-debug": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "releaseChannel": "test",
+      "env": {
+        "APP_ENV": "staging"
+      }
+    },
+    "staging": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "releaseChannel": "staging",
+      "env": {
+        "APP_ENV": "staging"
+      }
+    },
+    "staging-debug": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug"
+      },
+      "releaseChannel": "staging",
+      "env": {
+        "APP_ENV": "staging"
+      }
+    },
+    "production-bundle": {
+      "android": {
+        "buildType": "app-bundle",
+        "gradleCommand": ":app:bundleRelease"
+      },
+      "releaseChannel": "production",
+      "env": {
+        "APP_ENV": "production"
+      }
+    }
+  },
+
+  "submit": {
+    "production": {}
+  }
+}

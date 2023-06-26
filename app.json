@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Isha Nursery",
+    "slug": "cauvery-calling-pos",
+    "owner": "isha_foundation",
+    "version": "2.2.2",
+    "orientation": "landscape",
+    "icon": "./assets/icon.png",
+    "updates": {
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.metazone.ccpos",
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": "true"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon.png",
+        "backgroundColor": "#011355"
+      },
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "in.isha.sulaba.cauvery_calling_isha_nursery_pos",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/android-icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5fe5158c-bfc1-457d-8890-723b8ae47e8b"
+      }
+    },
+    "description": "",
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "isha-foundation-y7",
+            "project": "cauvery-calling-pos",
+            "authToken": "a2219fea2906445cade86cd41ebdbef4de704a4774c8426db3449434c5e73b5b",
+            "release": "STAGING"
+          }
+        }
+      ]
+    }
+  }
+}
